@@ -1,59 +1,103 @@
 <template>
   <div class="hello">
-        <v-card>
-      <v-responsive :aspect-ratio="16/9">
-        <v-card-text>
-              <h1>All the right books, in the right place.</h1>
-    <p>
-      G-Books will help you find the perfect book for any mood. Here are some reasons why you should use our service:
-    </p>
-        </v-card-text>
-        <v-container fluid grid-list-md>
-            <v-layout row wrap >
-              <v-flex d-flex xs12 sm6 md4>
-        <v-card color="green" dark flat>
-          <v-card-title primary class="title">Lorem</v-card-title>
-          <v-card-text>Every place has a culture, either by accident or design. We intentionally create an environment you can thrive in.</v-card-text>
-        </v-card>
-      </v-flex>
-            <v-flex d-flex xs12 sm6 md4>
-        <v-card color="green" dark flat>
-          <v-card-title primary class="title">Lorem</v-card-title>
-          <v-card-text>Our respectful + rewarding culture helps us to attract + retain the very best people.</v-card-text>
-        </v-card>
-      </v-flex>
-            <v-flex d-flex xs12 sm6 md4>
-        <v-card color="green" dark flat>
-          <v-card-title primary class="title">Lorem</v-card-title>
-          <v-card-text>We marry them together. Our members + guests are grateful we do.</v-card-text>
-        </v-card>
-      </v-flex>
-            </v-layout>
-        </v-container>
-                          <!-- <v-parallax
-    height="400"
-    src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-  > 
-      <v-layout
-      align-center
-      column
-      justify-center
-    >
-      <h1 class="display-3 font-weight-thin mb-3">G-Books</h1>
-      <h4 class="subheading">Find your book today!</h4>
-      </v-layout>
-          <v-flex xs12 sm6 md6>
-          <v-text-field
-      v-model="task"
-      label="What book are you looking for?"
-      @keydown.enter="create"
-    >
-    </v-text-field>
-    </v-flex>
-    </v-parallax> -->
-      </v-responsive>
+    <v-card>
+      <v-container
+        fluid
+        grid-list-xs
+        fill-height
+      >
+        <v-layout align-center>
+          <v-flex xs12>
+            <v-card
+              class="white--text"
+              img="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
+              style="min-height: 400px; margin:0 20px;"
+            >
+              <v-card-text class="text-sm-center">
+                <h1>All the right books, in the right place.</h1>
+                <p>
+                  G-Books will help you find the perfect book for any mood.
+                </p>
+                <v-btn
+                  class="text-xs-center"
+                  to="/books"
+                  large
+                  outline
+                  color="white"
+                >
+                  Search For Books
+                </v-btn>
+              </v-card-text>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+      <v-container
+        fluid
+        grid-list-xs
+        style="min-height: 400px;"
+      >
+        <v-layout
+          row
+          wrap
+        >
+          <v-flex
+            d-flex
+            xs12
+            sm6
+            md4
+          >
+            <v-card
+              color="transparent"
+              flat
+              style="padding:50px 20px;"
+            >
+              <v-icon>search</v-icon>
+              <v-card-title class="title justify-center">
+                Ease of use
+              </v-card-title>
+              <v-card-text>You'll find the experience quite familiar. Each search result provides a link to its respective Google Books page.</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex
+            d-flex
+            xs12
+            sm6
+            md4
+          >
+            <v-card
+              color="transparent"
+              flat
+              style="padding:50px 20px;"
+            >
+              <v-icon>language</v-icon>
+              <v-card-title class="title justify-center">
+                A world of books
+              </v-card-title>
+              <v-card-text>Preview the Cover, Title, and Author. It may also be free to download a PDF copy per the author's permission</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex
+            d-flex
+            xs12
+            sm12
+            md4
+          >
+            <v-card
+              color="transparent"
+              flat
+              style="padding:50px 20px;"
+            >
+              <v-icon>home</v-icon>
+              <v-card-title class="title justify-center">
+                Lorem
+              </v-card-title>
+              <v-card-text>We've created reference pages for every book so you can quickly find all kinds of relevant information: book reviews, web references, maps and more.</v-card-text>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </v-card>
-  
   </div>
 </template>
 
@@ -62,7 +106,7 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+
   }
   
 }

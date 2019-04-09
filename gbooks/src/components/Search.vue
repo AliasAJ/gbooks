@@ -1,25 +1,29 @@
-<template> 
-      <v-parallax
-    height="400"
+<template>
+  <v-parallax
     src="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
   > 
-      <v-layout
+    <v-layout
       align-center
       column
       justify-center
     >
-      <h1 class="display-3 font-weight-thin mb-3">G-Books</h1>
+      <h1 class="display-3 font-weight-thin mb-3">
+        G-Books
+      </h1>
       <!-- <h4 class="subheading">Find your book today!</h4> -->
-      </v-layout>
-          <v-flex xs12 sm6 md6>
-          <v-text-field
-      v-model="task"
-      label="What book are you looking for?"
-      @keydown.enter="create"
+    </v-layout>
+    <v-flex
+      xs12
+      sm6
+      md6
     >
-    </v-text-field>
+      <v-text-field
+        v-model="task"
+        color="white"
+        label="What book are you looking for?"
+      />
     </v-flex>
-    </v-parallax>
+  </v-parallax>
 </template>
 
 <script>
