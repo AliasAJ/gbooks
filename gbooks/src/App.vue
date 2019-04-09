@@ -9,21 +9,32 @@
           style="padding:0 20px"
         >
           <v-toolbar-side-icon>
-            <v-icon class="green--text">
+            <v-icon
+              to="/"
+              class="green--text"
+            >
               fas fa-book-open
             </v-icon>
           </v-toolbar-side-icon>
           <v-toolbar-title>
-            <v-btn
+            <!-- <v-btn
               to="/"
               flat
               class="green--text"
-            >
-              G-Books
-            </v-btn>
+            > -->
+            G-Books
+            <!-- </v-btn> -->
           </v-toolbar-title>
           <v-spacer />
-          <!-- <v-btn to="/" dark tile flat color="green lighten-1">Home</v-btn> -->
+          <!-- <v-btn
+            to="/"
+            dark
+            tile
+            flat
+            color="green lighten-1"
+          >
+            Home
+          </v-btn>
           <v-btn
             to="/books"
             dark
@@ -41,19 +52,19 @@
             color="green lighten-1"
           >
             About
-          </v-btn>
+          </v-btn> -->
         </v-toolbar>
         <router-view />
         <v-footer
-          bottom
           dark
           height="auto"
+          xs10
         >
           <v-flex md12>
             <v-card
               flat
               tile
-              class="green lighten-1 white--text text-xs-center"
+              class="green white--text text-xs-center"
             >
               <v-card-text>
                 <v-btn
@@ -73,10 +84,7 @@
                   </v-icon>
                 </v-btn>
               </v-card-text>
-
-              <v-card-text class="white--text pt-0">
-                THANK YOU DocNetwork for allowing me to audition for your stellar team!
-              </v-card-text>
+              THANK YOU DocNetwork for allowing me to audition for your stellar team!
               <v-card-text class="white--text">
                 &copy;2019 — <strong>Arthur Bates, Jr.</strong>
               </v-card-text>

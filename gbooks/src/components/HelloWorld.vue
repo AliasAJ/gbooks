@@ -1,7 +1,68 @@
 <template>
   <div class="hello">
     <v-card>
-      <v-container
+      <v-parallax
+        dark
+        src="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
+      >
+        <v-container
+          fluid
+          grid-list-xs
+          fill-height
+        >
+          <v-layout align-center>
+            <v-flex
+              lg6
+              md6
+              xs12
+              class="mt-5 mb-5"
+            >
+              <parallax-container class="horizontal-card centered-card">
+                <parallax-element
+                  class="background-image"
+                  :parallax-strength="30"
+                  :type="'depth'"
+                >
+                  <v-card
+                    color="transparent"
+                    class=" white--text pt-5"
+                    flat
+                    style="min-height: 400px;"
+                  >
+                    <v-card-text class=" title text-sm-center pt-4">
+                      <parallax-element
+                        class="text-container"
+                        :parallax-strength="-20"
+                        :type="'depth'"
+                      >
+                        <h1 class="mb-4">
+                          Great books on one easy-to-use platform.
+                        </h1>
+                      </parallax-element>
+                      <v-divider class="white mb-4" />
+                      <p>
+                        G-Books will help you find the perfect book for any mood.
+                      </p>
+                    </v-card-text>
+                    <Press>
+                      <v-btn
+                        class="text-xs-center mt-3 mb-5"
+                        href="#search"
+                        large
+                        outline
+                        color="white"
+                      >
+                        Search For Books
+                      </v-btn>
+                    </Press>
+                  </v-card>
+                </parallax-element>
+              </parallax-container>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-parallax>
+      <!-- <v-container
         fluid
         grid-list-xs
         fill-height
@@ -9,12 +70,15 @@
         <v-layout align-center>
           <v-flex xs12>
             <v-card
-              class="white--text"
+              class=" white--text pt-5"
+              flat
               img="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
               style="min-height: 400px; margin:0 20px;"
             >
-              <v-card-text class="text-sm-center">
-                <h1>All the right books, in the right place.</h1>
+              <v-card-text class=" title text-sm-center pt-5">
+                <h1 class="mb-3">
+                  Your favorite book in one easy-to-use platform.
+                </h1>
                 <p>
                   G-Books will help you find the perfect book for any mood.
                 </p>
@@ -31,7 +95,7 @@
             </v-card>
           </v-flex>
         </v-layout>
-      </v-container>
+      </v-container> -->
       <v-container
         fluid
         grid-list-xs
@@ -47,17 +111,19 @@
             sm6
             md4
           >
-            <v-card
-              color="transparent"
-              flat
-              style="padding:50px 20px;"
-            >
-              <v-icon>search</v-icon>
-              <v-card-title class="title justify-center">
-                Ease of use
-              </v-card-title>
-              <v-card-text>You'll find the experience quite familiar. Each search result provides a link to its respective Google Books page.</v-card-text>
-            </v-card>
+            <Box>
+              <v-card
+                color="transparent"
+                flat
+                style="padding:50px 20px;"
+              >
+                <v-icon>search</v-icon>
+                <v-card-title class="title justify-center">
+                  Ease of use
+                </v-card-title>
+                <v-card-text>You'll find the experience quite familiar. Each search result provides a link to its respective Google Books page.</v-card-text>
+              </v-card>
+            </Box>
           </v-flex>
           <v-flex
             d-flex
@@ -65,17 +131,19 @@
             sm6
             md4
           >
-            <v-card
-              color="transparent"
-              flat
-              style="padding:50px 20px;"
-            >
-              <v-icon>language</v-icon>
-              <v-card-title class="title justify-center">
-                A world of books
-              </v-card-title>
-              <v-card-text>Preview the Cover, Title, and Author. It may also be free to download a PDF copy per the author's permission</v-card-text>
-            </v-card>
+            <Box>
+              <v-card
+                color="transparent"
+                flat
+                style="padding:50px 20px;"
+              >
+                <v-icon>language</v-icon>
+                <v-card-title class="title justify-center">
+                  A world of books
+                </v-card-title>
+                <v-card-text>Preview the Cover, Title, and Author. It may also be free to download a PDF copy per the author's permission</v-card-text>
+              </v-card>
+            </Box>
           </v-flex>
           <v-flex
             d-flex
@@ -83,16 +151,55 @@
             sm12
             md4
           >
+            <Box>
+              <v-card
+                color="transparent"
+                flat
+                style="padding:50px 20px;"
+              >
+                <v-icon>home</v-icon>
+                <v-card-title class="title justify-center">
+                  Lorem
+                </v-card-title>
+                <v-card-text>We've created reference pages for every book so you can quickly find all kinds of relevant information: book reviews, web references, maps and more.</v-card-text>
+              </v-card>
+            </Box>
+          </v-flex>
+        </v-layout>
+      </v-container>
+      <v-container
+        fluid
+        grid-list-xs
+      >
+        <a name="search" />
+        <v-layout>
+          <v-flex xs12>
             <v-card
-              color="transparent"
+              class=" white--text pt-5"
               flat
-              style="padding:50px 20px;"
+              style="margin:0 20px;"
             >
-              <v-icon>home</v-icon>
-              <v-card-title class="title justify-center">
-                Lorem
-              </v-card-title>
-              <v-card-text>We've created reference pages for every book so you can quickly find all kinds of relevant information: book reviews, web references, maps and more.</v-card-text>
+              <v-parallax
+                src="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
+              >
+                <v-card-text class=" Headline text-sm-center pt-5">
+                  <h1 class="mb-3">
+                    Your favorite book in one easy-to-use platform.
+                  </h1>
+                </v-card-text>
+                <v-flex
+                  xs10
+                  sm10
+                  md6
+                  class="text-sm-center"
+                >
+                  <v-text-field
+                    class="text-sm-center"
+                    color="white"
+                    label="What book are you looking for?"
+                  />
+                </v-flex>
+              </v-parallax>
             </v-card>
           </v-flex>
         </v-layout>
@@ -102,14 +209,25 @@
 </template>
 
 <script>
+import posed from 'vue-pose';
 
 export default {
-  name: 'HelloWorld',
-  props: {
 
-  }
-  
-}
+  name: 'HelloWorld',
+  components: {
+    Box: posed.div({
+      hoverable: true,
+      init: { scale: 1, boxShadow: '0px 0px 0px rgba(0,0,0,0)' },
+      hover: { scale: 1.1, boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'},
+    }),
+    Press: posed.div({
+      hoverable:true,
+      pressable: true,
+      init: { scale: 1 },
+      press: { scale: 1.3 },
+      hover: {scale: 1.1}
+
+      })}}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -127,5 +245,11 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #54E365;
 }
 </style>
