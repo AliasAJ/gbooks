@@ -84,7 +84,9 @@
                   </v-icon>
                 </v-btn>
               </v-card-text>
-              THANK YOU DocNetwork for allowing me to audition for your stellar team!
+              <v-card-text class="white--text">
+                THANK YOU DocNetwork for allowing me to audition for your stellar team!
+              </v-card-text>
               <v-card-text class="white--text">
                 &copy;2019 — <strong>Arthur Bates, Jr.</strong>
               </v-card-text>

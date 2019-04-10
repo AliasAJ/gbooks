@@ -17,47 +17,53 @@
               xs12
               class="mt-5 mb-5"
             >
-              <parallax-container class="horizontal-card centered-card">
-                <parallax-element
-                  class="background-image"
-                  :parallax-strength="30"
-                  :type="'depth'"
-                >
-                  <v-card
-                    color="transparent"
-                    class=" white--text pt-5"
-                    flat
-                    style="min-height: 400px;"
+              <parallax-element
+                class="text-container"
+                :parallax-strength="30"
+                :type="'translation'"
+              >
+                <parallax-container class="horizontal-card centered-card">
+                  <parallax-element
+                    class="background-image"
+                    :parallax-strength="30"
+                    :type="'depth'"
                   >
-                    <v-card-text class=" title text-sm-center pt-4">
-                      <parallax-element
-                        class="text-container"
-                        :parallax-strength="-20"
-                        :type="'depth'"
-                      >
-                        <h1 class="mb-4">
-                          Great books on one easy-to-use platform.
-                        </h1>
-                      </parallax-element>
-                      <v-divider class="white mb-4" />
-                      <p>
-                        G-Books will help you find the perfect book for any mood.
-                      </p>
-                    </v-card-text>
-                    <Press>
-                      <v-btn
-                        class="text-xs-center mt-3 mb-5"
-                        href="#search"
-                        large
-                        outline
-                        color="white"
-                      >
-                        Search For Books
-                      </v-btn>
-                    </Press>
-                  </v-card>
-                </parallax-element>
-              </parallax-container>
+                    <v-card
+                      color="transparent"
+                      class=" white--text pt-5"
+                      flat
+                      style="min-height: 400px;"
+                    >
+                      <v-card-text class=" title text-sm-center pt-4">
+                        <parallax-element
+                          class="text-container"
+                          :parallax-strength="-20"
+                          :type="'depth'"
+                        >
+                          <h1 class="mb-4">
+                            Great books on one easy-to-use platform.
+                          </h1>
+                          <v-divider class="white mb-4" />
+                          <p>
+                            G-Books will help you find the perfect book for any mood.
+                          </p>
+                        </parallax-element>
+                      </v-card-text>
+                      <Press>
+                        <v-btn
+                          class="text-xs-center mt-3 mb-5"
+                          href="#search"
+                          large
+                          outline
+                          color="white"
+                        >
+                          Search For Books
+                        </v-btn>
+                      </Press>
+                    </v-card>
+                  </parallax-element>
+                </parallax-container>
+              </parallax-element>
             </v-flex>
           </v-layout>
         </v-container>
@@ -99,11 +105,12 @@
       <v-container
         fluid
         grid-list-xs
-        style="min-height: 400px;"
+        fill-height
       >
         <v-layout
           row
           wrap
+          align-center
         >
           <v-flex
             d-flex
@@ -111,19 +118,17 @@
             sm6
             md4
           >
-            <Box>
-              <v-card
-                color="transparent"
-                flat
-                style="padding:50px 20px;"
-              >
-                <v-icon>search</v-icon>
-                <v-card-title class="title justify-center">
-                  Ease of use
-                </v-card-title>
-                <v-card-text>You'll find the experience quite familiar. Each search result provides a link to its respective Google Books page.</v-card-text>
-              </v-card>
-            </Box>
+            <v-card
+              color="transparent"
+              flat
+              style="padding:60px 20px 20px;"
+            >
+              <v-icon>search</v-icon>
+              <v-card-title class="title justify-center">
+                Ease of use
+              </v-card-title>
+              <v-card-text>You'll find the experience quite familiar. Each search result provides a link to its respective Google Books page.</v-card-text>
+            </v-card>
           </v-flex>
           <v-flex
             d-flex
@@ -131,19 +136,17 @@
             sm6
             md4
           >
-            <Box>
-              <v-card
-                color="transparent"
-                flat
-                style="padding:50px 20px;"
-              >
-                <v-icon>language</v-icon>
-                <v-card-title class="title justify-center">
-                  A world of books
-                </v-card-title>
-                <v-card-text>Preview the Cover, Title, and Author. It may also be free to download a PDF copy per the author's permission</v-card-text>
-              </v-card>
-            </Box>
+            <v-card
+              color="transparent"
+              flat
+              style="padding:60px 20px 20px;"
+            >
+              <v-icon>language</v-icon>
+              <v-card-title class="title justify-center">
+                A world of books
+              </v-card-title>
+              <v-card-text>Preview the Cover, Title, and Author. It may also be free to download a PDF copy per the author's permission</v-card-text>
+            </v-card>
           </v-flex>
           <v-flex
             d-flex
@@ -151,19 +154,17 @@
             sm12
             md4
           >
-            <Box>
-              <v-card
-                color="transparent"
-                flat
-                style="padding:50px 20px;"
-              >
-                <v-icon>home</v-icon>
-                <v-card-title class="title justify-center">
-                  Lorem
-                </v-card-title>
-                <v-card-text>We've created reference pages for every book so you can quickly find all kinds of relevant information: book reviews, web references, maps and more.</v-card-text>
-              </v-card>
-            </Box>
+            <v-card
+              color="transparent"
+              flat
+              style="padding:60px 20px 20px;"
+            >
+              <v-icon>home</v-icon>
+              <v-card-title class="title justify-center">
+                Lorem
+              </v-card-title>
+              <v-card-text>We've created reference pages for every book so you can quickly find all kinds of relevant information: book reviews, web references, maps and more.</v-card-text>
+            </v-card>
           </v-flex>
         </v-layout>
       </v-container>
@@ -177,9 +178,10 @@
             <v-card
               class=" white--text pt-5"
               flat
-              style="margin:0 20px;"
+              style="margin:0 30px 40px;"
             >
               <v-parallax
+                height="300"
                 src="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
               >
                 <v-card-text class=" Headline text-sm-center pt-5">
@@ -193,33 +195,32 @@
                   md6
                   class="text-sm-center"
                 >
-                  <v-text-field
-                    class="text-sm-center"
-                    color="white"
-                    label="What book are you looking for?"
-                  />
+                  <div id="bookSearch">
+                    <!-- id="bookSearchApp" -->
+                    <BookSearch />
+                  </div>
                 </v-flex>
               </v-parallax>
-            </v-card>
+            </v-card>        
           </v-flex>
         </v-layout>
       </v-container>
+      <!-- results section -->
+      <!-- <Search /> -->
+    <!-- end results -->
     </v-card>
   </div>
 </template>
 
 <script>
 import posed from 'vue-pose';
+import BookSearch from './Search.vue';
+
 
 export default {
 
   name: 'HelloWorld',
   components: {
-    Box: posed.div({
-      hoverable: true,
-      init: { scale: 1, boxShadow: '0px 0px 0px rgba(0,0,0,0)' },
-      hover: { scale: 1.1, boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'},
-    }),
     Press: posed.div({
       hoverable:true,
       pressable: true,
@@ -227,7 +228,11 @@ export default {
       press: { scale: 1.3 },
       hover: {scale: 1.1}
 
-      })}}
+      }),
+      BookSearch
+
+      }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

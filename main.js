@@ -1,7 +1,7 @@
 // Renders an error message
 function showError(msg) {
   const html = `<li><p class="error">${msg}</p></li>`;
-  document.querySelector('#results').innerHTML = html;
+  document.querySelector("#results").innerHTML = html;
 }
 
 // Searches for books and returns a promise that resolves a JSON list
