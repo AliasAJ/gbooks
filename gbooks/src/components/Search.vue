@@ -154,7 +154,7 @@ export default Vue.component('BookSearch', {
 </script>
 <style scoped>
 img{
-  width: 210px;
+  width: 230px;
 }
 ul {
   display:flex;
