@@ -15,52 +15,44 @@
               xs12
               class="mt-5 mb-5"
             >
-              <parallax-container class="horizontal-card centered-card">
-                <parallax-element
-                  class="background-image"
-                  :parallax-strength="15"
-                  :type="'depth'"
-                >
-                  <v-card
-                    color="transparent"
-                    class=" white--text pt-5 pb-5"
-                    flat
-                    style="min-height: 400px;"
+              <v-card
+                color="transparent"
+                class=" white--text pt-5 pb-5"
+                flat
+                style="min-height: 400px;"
+              >
+                <v-card-text class=" title text-sm-center pt-5">
+                  <parallax-element
+                    class="text-container"
+                    :parallax-strength="-10"
+                    :type="'depth'"
                   >
-                    <v-card-text class=" title text-sm-center pt-5">
-                      <parallax-element
-                        class="text-container"
-                        :parallax-strength="-10"
-                        :type="'depth'"
-                      >
-                        <h1 class="mb-4">
-                          Find the book you love.
-                        </h1>
-                        <v-divider class="white mb-4" />
-                        <p>
-                          G-Books will help you find the perfect book for any mood.
-                        </p>
-                      </parallax-element>
-                    </v-card-text>
-                    <Press>
-                      <v-btn
-                        class="text-xs-center mt-3 mb-5"
-                        href="#search"
-                        large
-                        outline
-                        color="white"
-                      >
-                        Search For Books
-                      </v-btn>
-                    </Press>
-                  </v-card>
-                </parallax-element>
-              </parallax-container>
+                    <h1 class="mb-4">
+                      Find the book you love.
+                    </h1>
+                    <v-divider class="white mb-4" />
+                    <p>
+                      G-Books will help you find the perfect book for any mood.
+                    </p>
+                  </parallax-element>
+                </v-card-text>
+                <Press>
+                  <v-btn
+                    class="text-xs-center mt-3 mb-5"
+                    href="#search"
+                    large
+                    outline
+                    color="white"
+                  >
+                    Search For Books
+                  </v-btn>
+                </Press>
+              </v-card>
             </v-flex>
             <parallax-container class="horizontal-card">
               <parallax-element
                 class="background-image"
-                :parallax-strength="20"
+                :parallax-strength="-1"
                 :type="'depth'"
               >
                 <img
