@@ -7,7 +7,6 @@
       >
         <v-container
           fluid
-          grid-list-xs
           fill-height
         >
           <v-layout align-center>
@@ -19,13 +18,13 @@
             >
               <parallax-element
                 class="text-container"
-                :parallax-strength="30"
+                :parallax-strength="10"
                 :type="'translation'"
               >
                 <parallax-container class="horizontal-card centered-card">
                   <parallax-element
                     class="background-image"
-                    :parallax-strength="30"
+                    :parallax-strength="20"
                     :type="'depth'"
                   >
                     <v-card
@@ -181,12 +180,12 @@
               style="margin:0 30px 40px;"
             >
               <v-parallax
-                height="300"
+                height="100"
                 src="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
               >
                 <v-card-text class=" Headline text-sm-center pt-5">
-                  <h1 class="mb-3">
-                    Your favorite book in one easy-to-use platform.
+                  <h1 class="mb-4">
+                    Give our search a try
                   </h1>
                 </v-card-text>
                 <v-flex
@@ -197,10 +196,10 @@
                 >
                   <div id="bookSearch">
                     <!-- id="bookSearchApp" -->
-                    <BookSearch />
                   </div>
                 </v-flex>
               </v-parallax>
+              <BookSearch />
             </v-card>        
           </v-flex>
         </v-layout>

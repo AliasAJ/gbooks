@@ -1,50 +1,93 @@
 <template>
-  <section>
-    <form
-      id="bookSearchApp"
-      @submit.prevent="search()"
+  <v-flex
+    d-inline
+    xs12
+    class="text-xs-center"
+  >
+    <v-container
+      fluid
+      fill-height
     >
-      <v-text-field
-        v-model="books.searchTerm"
-        class="text-sm-center"
-        color="white"
-        label="What book are you looking for?"
-      />
-      <Press>
-        <v-btn
-          class="text-xs-center mt-3 mb-5"
-          large
-          outline
-          color="white"
-          type="submit"
+      <v-layout
+        flex
+        align-center
+        justify-center
+      >
+        <v-flex
+          xs12
+          sm10
+          md8
+          lg6
+          class="text-xs-center"
         >
-          Search
-        </v-btn>
-      </Press>  
-    </form> 
-    <div>
+          <form
+      
+            id="bookSearchApp"
+            class="text-xs-center"
+            @submit.prevent="search()"
+          >
+            <v-text-field
+              v-model="books.searchTerm"
+              class="mt-5 text-xs-center"
+              color="green lighten-1"
+              label="What book are you looking for?"
+            />
+            <Press>
+              <v-btn
+                class="mt-3 mb-5"
+                large
+                outline
+                color="green light-1"
+                type="submit"
+              >
+                Search
+              </v-btn>
+            </Press>  
+          </form> 
+        </v-flex>
+      </v-layout>
+    </v-container>
+    <v-container
+      fluid
+      fill-height
+      justify-center
+    >
       <ul>
         <li
           v-for="book in books.searchResults.items"
           :key="book.id"
         >
-          <img
-            :src="'http://books.google.com/books/content?id=' + book.id + '&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'"
+          <v-layout
+            justify-center
           >
-      
+            <Press>
+              <img
+                :src="'http://books.google.com/books/content?id=' + book.id + '&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'"
+                @click="redirect"
+              >
+            </Press>
+          </v-layout>
           <div>
-            <h4>{{ book.volumeInfo.title }}</h4>
-            <h2 v-if="book.volumeInfo.subtitle">
+            <h4 class="black--text">
+              {{ book.volumeInfo.title }}
+            </h4>
+            <h2
+              v-if="book.volumeInfo.subtitle"
+              class="black--text"
+            >
               {{ book.volumeInfo.subtitle }}
             </h2>
-            <h3 v-if="book.volumeInfo.authors">
-              by {{ bookAuthors(book) }}
+            <h3
+              v-if="book.volumeInfo.authors"
+              class="black--text"
+            >
+              by {{ authors(book) }}
             </h3>
           </div>
         </li>
       </ul>
-    </div>
-  </section>
+    </v-container>
+  </v-flex>
 </template>
 
 <script>
@@ -61,6 +104,12 @@ export default Vue.component('BookSearch', {
       press: { scale: 1.3 },
       hover: {scale: 1.1}
 
+      }),
+
+      Hover: posed.div({
+      hoverable:true,
+      init: { scale: 1 },
+      hover: {scale: 1.2}
       }),
     },
   data: function() {
@@ -81,8 +130,11 @@ export default Vue.component('BookSearch', {
         })
         .catch(error => (error));
     },
-
-    bookAuthors(book) {
+    redirect(e) {
+      e.preventDefault();
+     window.location.href=`https://books.google.com/ebooks?id=`+ this.book.id + `&dq=holmes&as_brr=4&source=webstore_bookcard`;
+    },
+    authors(book) {
       let authors = book.volumeInfo.authors;
       if (authors.length < 3) {
         authors = authors.join(" and ");
