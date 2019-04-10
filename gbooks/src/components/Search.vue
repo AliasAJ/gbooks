@@ -14,7 +14,7 @@
         justify-center
       >
         <v-flex
-          xs12
+          xs10
           sm10
           md8
           lg6
@@ -30,17 +30,19 @@
               v-model="books.searchTerm"
               class="mt-5 text-xs-center"
               color="green lighten-1"
-              label="What book are you looking for?"
+              label="Type a title or keyword"
             />
             <Press>
               <v-btn
                 class="mt-3 mb-5"
-                large
-                outline
-                color="green light-1"
+                flat
+                color="transparent"
                 type="submit"
               >
-                Search
+                <img
+                  style="width:100px; margin:10 20px 40px; postion:absolute"
+                  src="../assets/Gbook_mark.png"
+                >
               </v-btn>
             </Press>  
           </form> 
@@ -67,22 +69,22 @@
               >
             </Press>
           </v-layout>
-          <div>
-            <h4 class="black--text">
+          <div class="list-items">
+            <h2 class="green--text">
               {{ book.volumeInfo.title }}
-            </h4>
-            <h2
+            </h2>
+            <p
               v-if="book.volumeInfo.subtitle"
               class="black--text"
             >
               {{ book.volumeInfo.subtitle }}
-            </h2>
-            <h3
+            </p>
+            <h4
               v-if="book.volumeInfo.authors"
               class="black--text"
             >
               by {{ authors(book) }}
-            </h3>
+            </h4>
           </div>
         </li>
       </ul>
@@ -106,11 +108,11 @@ export default Vue.component('BookSearch', {
 
       }),
 
-      Hover: posed.div({
-      hoverable:true,
-      init: { scale: 1 },
-      hover: {scale: 1.2}
-      }),
+      // Hover: posed.div({
+      // hoverable:true,
+      // init: { scale: 1 },
+      // hover: {scale: 1.2}
+      // }),
     },
   data: function() {
   return {
@@ -132,7 +134,7 @@ export default Vue.component('BookSearch', {
     },
     redirect(e) {
       e.preventDefault();
-     window.location.href=`https://books.google.com/ebooks?id=`+ this.book.id + `&dq=holmes&as_brr=4&source=webstore_bookcard`;
+     location="'https://books.google.com/ebooks?id='+ this.book.id + '&dq=holmes&as_brr=4&source=webstore_bookcard'";
     },
     authors(book) {
       let authors = book.volumeInfo.authors;
@@ -150,3 +152,26 @@ export default Vue.component('BookSearch', {
     template: "#bookSearchApp",
 });
 </script>
+<style scoped>
+img{
+  width: 210px;
+}
+ul {
+  display:flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+li {
+  padding:20px 50px;
+  display:flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.list-items {
+  width: 230px;
+  margin:auto;
+  padding: 20px;
+}
+</style>

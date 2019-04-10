@@ -6,23 +6,18 @@
           fixed
           class="elevation-0"
           color="white"
-          style="padding:0 20px"
+          style="padding:20px 0 0  50px;"
         >
-          <v-toolbar-side-icon>
-            <v-icon
-              to="/"
-              class="green--text"
-            >
-              fas fa-book-open
-            </v-icon>
-          </v-toolbar-side-icon>
           <v-toolbar-title>
             <!-- <v-btn
               to="/"
               flat
               class="green--text"
             > -->
-            G-Books
+            <img
+              width="150px"
+              src="./assets/Gbook_combo.png"
+            >
             <!-- </v-btn> -->
           </v-toolbar-title>
           <v-spacer />
@@ -71,7 +66,9 @@
                   href="https://github.com/AliasAJ"
                   icon
                 >
-                  <v-icon size="30px">
+                  <v-icon
+                    size="30px"
+                  >
                     fab fa-github
                   </v-icon>
                 </v-btn>
@@ -85,7 +82,7 @@
                 </v-btn>
               </v-card-text>
               <v-card-text class="white--text">
-                THANK YOU DocNetwork for allowing me to audition for your stellar team!
+                THANK YOU DocNetwork for allowing me the opportunity to audition for your team!
               </v-card-text>
               <v-card-text class="white--text">
                 &copy;2019 — <strong>Arthur Bates, Jr.</strong>

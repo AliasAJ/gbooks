@@ -2,7 +2,6 @@
   <div class="hello">
     <v-card>
       <v-parallax
-        dark
         src="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
       >
         <v-container
@@ -64,6 +63,11 @@
                 </parallax-container>
               </parallax-element>
             </v-flex>
+            <img
+              width="380px"
+              style="margin:0 20px; postion:absolute"
+              src="../assets/Gbook_mark.png"
+            >
           </v-layout>
         </v-container>
       </v-parallax>
@@ -122,11 +126,13 @@
               flat
               style="padding:60px 20px 20px;"
             >
-              <v-icon>search</v-icon>
-              <v-card-title class="title justify-center">
+              <v-icon class="green--text">
+                search
+              </v-icon>
+              <v-card-title class=" green--text title justify-center">
                 Ease of use
               </v-card-title>
-              <v-card-text>You'll find the experience quite familiar. Each search result provides a link to its respective Google Books page.</v-card-text>
+              <v-card-text>You'll find this experience familiar. Just search for a title and the Google Books API will provide some items for you.</v-card-text>
             </v-card>
           </v-flex>
           <v-flex
@@ -140,8 +146,10 @@
               flat
               style="padding:60px 20px 20px;"
             >
-              <v-icon>language</v-icon>
-              <v-card-title class="title justify-center">
+              <v-icon class="green--text">
+                language
+              </v-icon>
+              <v-card-title class=" green--text title justify-center">
                 A world of books
               </v-card-title>
               <v-card-text>Preview the Cover, Title, and Author. It may also be free to download a PDF copy per the author's permission</v-card-text>
@@ -158,11 +166,13 @@
               flat
               style="padding:60px 20px 20px;"
             >
-              <v-icon>home</v-icon>
-              <v-card-title class="title justify-center">
-                Lorem
+              <v-icon class="green--text">
+                import_contacts
+              </v-icon>
+              <v-card-title class=" green--text title justify-center">
+                Some of your favorites
               </v-card-title>
-              <v-card-text>We've created reference pages for every book so you can quickly find all kinds of relevant information: book reviews, web references, maps and more.</v-card-text>
+              <v-card-text>Click the cover and you'll find a reference page for every book so you can quickly find all kinds of relevant information.</v-card-text>
             </v-card>
           </v-flex>
         </v-layout>
@@ -170,20 +180,22 @@
       <v-container
         fluid
         grid-list-xs
+        style="padding:24px 0"
       >
         <a name="search" />
         <v-layout>
           <v-flex xs12>
             <v-card
-              class=" white--text pt-5"
               flat
-              style="margin:0 30px 40px;"
             >
               <v-parallax
                 height="100"
                 src="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
               >
-                <v-card-text class=" Headline text-sm-center pt-5">
+                <v-card-text
+                  fullwidth
+                  class=" Headline text-sm-center pt-5"
+                >
                   <h1 class="mb-4">
                     Give our search a try
                   </h1>
@@ -193,11 +205,7 @@
                   sm10
                   md6
                   class="text-sm-center"
-                >
-                  <div id="bookSearch">
-                    <!-- id="bookSearchApp" -->
-                  </div>
-                </v-flex>
+                />
               </v-parallax>
               <BookSearch />
             </v-card>        
