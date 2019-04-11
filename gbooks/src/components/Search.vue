@@ -65,7 +65,7 @@
             <Press>
               <img
                 :src="'http://books.google.com/books/content?id=' + book.id + '&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'"
-                @click="redirect"
+                @click="redirect(book.id)"
               >
             </Press>
           </v-layout>
@@ -104,7 +104,7 @@ export default Vue.component('BookSearch', {
       pressable: true,
       init: { scale: 1 },
       press: { scale: 1.3 },
-      hover: {scale: 1.1}
+      hover: {scale: 1.1, boxshadow:'0px 4px 1px rgb(168, 234, 76'}
 
       }),
 
@@ -132,9 +132,8 @@ export default Vue.component('BookSearch', {
         })
         .catch(error => (error));
     },
-    redirect(e) {
-      e.preventDefault();
-     location="'https://books.google.com/ebooks?id='+ this.book.id + '&dq=holmes&as_brr=4&source=webstore_bookcard'";
+    redirect(id) {
+     location.href='https://books.google.com/ebooks?id='+ id + '&dq=holmes&as_brr=4&source=webstore_bookcard';
     },
     authors(book) {
       let authors = book.volumeInfo.authors;

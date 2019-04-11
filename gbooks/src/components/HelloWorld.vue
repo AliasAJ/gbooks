@@ -3,7 +3,7 @@
     <v-card>
       <v-parallax
         height="500"
-        src="https://www.setaswall.com/wp-content/uploads/2018/02/Green-Background-27-1920x1200.jpg"
+        src="https://www.cvtslandscape.com/wp-content/uploads/2015/07/FOyu6CV.jpg"
       >
         <v-container
           fluid
@@ -11,7 +11,7 @@
         >
           <v-layout align-center>
             <v-flex
-              lg7
+              lg10
               md7
               xs12
               class="mt-5 mb-5"
@@ -28,11 +28,11 @@
                     :parallax-strength="-10"
                     :type="'depth'"
                   >
-                    <h1 class="mb-4">
+                    <h1 class=" display-2 font-weight-bold mb-4">
                       Find the book you love.
                     </h1>
                     <v-divider class="green mb-4" />
-                    <p>
+                    <p class="font-italic">
                       G-Books will help you find the perfect book for any mood.
                     </p>
                   </parallax-element>
@@ -53,7 +53,7 @@
             <parallax-container class="horizontal-card">
               <parallax-element
                 class="background-image"
-                :parallax-strength="-1"
+                :parallax-strength="1.2"
                 :type="'depth'"
               >
                 <img
@@ -223,7 +223,7 @@ export default {
       pressable: true,
       init: { scale: 1 },
       press: { scale: 1.3 },
-      hover: {scale: 1.1}
+      hover: {scale: 1.1, boxShadow:'0px 5px 10px rgb(168, 234, 76'}
 
       }),
       BookSearch
