@@ -6,7 +6,7 @@
           fixed
           class="elevation-0"
           color="white"
-          style="padding:20px 0 0  50px;"
+          style="padding:15px 0 0  50px;"
         >
           <v-toolbar-title>
             <!-- <v-btn
@@ -59,7 +59,8 @@
             <v-card
               flat
               tile
-              class="green white--text text-xs-center"
+              class=" text-xs-center"
+              color="rgb(120, 194, 23)"
             >
               <v-card-text>
                 <v-btn
@@ -81,10 +82,10 @@
                   </v-icon>
                 </v-btn>
               </v-card-text>
-              <v-card-text class="white--text">
-                THANK YOU DocNetwork for allowing me the opportunity to audition for your team!
+              <v-card-text class=" subheading black--text">
+                THANK YOU DocNetwork for allowing me the opportunity to try out for the team!
               </v-card-text>
-              <v-card-text class="white--text">
+              <v-card-text class=" body-2 black--text">
                 &copy;2019 — <strong>Arthur Bates, Jr.</strong>
               </v-card-text>
             </v-card>

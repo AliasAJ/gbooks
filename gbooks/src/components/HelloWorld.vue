@@ -2,8 +2,8 @@
   <div class="hello">
     <v-card>
       <v-parallax
-        height="500"
-        src="https://www.cvtslandscape.com/wp-content/uploads/2015/07/FOyu6CV.jpg"
+        style="height:100%; padding-top:2%"
+        src="https://img3.akspic.com/image/29342-line-grass-color-green-leaf-2560x1600.jpg"
       >
         <v-container
           fluid
@@ -11,49 +11,60 @@
         >
           <v-layout align-center>
             <v-flex
-              lg10
-              md7
               xs12
               class="mt-5 mb-5"
             >
               <v-card
                 color="transparent"
-                class=" green--text pt-5 pb-5"
+                class=" white--text"
                 flat
-                style="min-height: 400px;"
               >
-                <v-card-text class=" title text-sm-center pt-5">
+                <v-card-text class=" display-1 text-sm-left">
                   <parallax-element
                     class="text-container"
                     :parallax-strength="-10"
                     :type="'depth'"
                   >
-                    <h1 class=" display-2 font-weight-bold mb-4">
+                    <!-- <h1
+
+                      class=" title font-weight-bold mb-5"
+                    >
                       Find the book you love.
                     </h1>
-                    <v-divider class="green mb-4" />
-                    <p class="font-italic">
-                      G-Books will help you find the perfect book for any mood.
+                    <h1
+
+                      class=" display-2 font-weight-bold mb-5"
+                    >
+                      Find the book you love.
+                    </h1> -->
+                    <h1
+                      class=" display-4 font-weight-bold mb-5"
+                    >
+                      Find the book you love.
+                    </h1>
+                    <p class="font-weight-regular">
+                      G-Books helps you find a book for any mood.
                     </p>
                   </parallax-element>
                 </v-card-text>
-                <Press>
-                  <v-btn
-                    class="text-xs-center mt-3 mb-5"
-                    href="#search"
-                    large
-                    outline
-                    color="green"
-                  >
-                    Search For Books
-                  </v-btn>
-                </Press>
               </v-card>
+              <Press>
+                <v-btn
+                  class="align-right mt-5"
+                  href="#search"
+                  large
+                  outline
+                  block
+                  color="white"
+                >
+                  Search For Books
+                </v-btn>
+              </Press>
             </v-flex>
-            <parallax-container class="horizontal-card">
+            <!-- <parallax-container class="horizontal-card card-center">
               <parallax-element
                 class="background-image"
-                :parallax-strength="1.2"
+                :parallax-strength="1.5"
                 :type="'depth'"
               >
                 <img
@@ -62,7 +73,7 @@
                   src="../assets/Gbook_mark.png"
                 >
               </parallax-element>
-            </parallax-container>
+            </parallax-container> -->
           </v-layout>
         </v-container>
       </v-parallax>
@@ -119,15 +130,20 @@
             <v-card
               color="transparent"
               flat
-              style="padding:60px 20px 20px;"
+              style="padding:15% 20px;"
             >
-              <v-icon class="green--text">
+              <v-icon color="rgb(120, 194, 23)">
                 search
               </v-icon>
-              <v-card-title class=" green--text title justify-center">
+              <v-card-title
+                style="color:rgb(120, 194, 23)"
+                class="title justify-center"
+              >
                 Ease of use
               </v-card-title>
-              <v-card-text>You'll find this experience familiar. Just search for a title and the Google Books API will provide some items for you.</v-card-text>
+              <v-card-text class="body-2">
+                You'll find this experience familiar. Just search for a title and the Google Books API will provide some items for you.
+              </v-card-text>
             </v-card>
           </v-flex>
           <v-flex
@@ -139,15 +155,20 @@
             <v-card
               color="transparent"
               flat
-              style="padding:60px 20px 20px;"
+              style="padding:15% 20px;"
             >
-              <v-icon class="green--text">
+              <v-icon color="rgb(120, 194, 23)">
                 language
               </v-icon>
-              <v-card-title class=" green--text title justify-center">
+              <v-card-title
+                style="color:rgb(120, 194, 23)"
+                class=" title justify-center"
+              >
                 A world of books
               </v-card-title>
-              <v-card-text>Preview the Cover, Title, and Author. It may also be free to download a PDF copy per the author's permission</v-card-text>
+              <v-card-text class="body-2">
+                Preview the Cover, Title, and Author. It may also be free to download a PDF copy per the author's permission
+              </v-card-text>
             </v-card>
           </v-flex>
           <v-flex
@@ -159,15 +180,20 @@
             <v-card
               color="transparent"
               flat
-              style="padding:60px 20px 20px;"
+              style="padding:15% 20px;"
             >
-              <v-icon class="green--text">
-                import_contacts
+              <v-icon color="rgb(120, 194, 23)">
+                favorite
               </v-icon>
-              <v-card-title class=" green--text title justify-center">
+              <v-card-title
+                style="color:rgb(120, 194, 23)"
+                class=" title justify-center"
+              >
                 Some of your favorites
               </v-card-title>
-              <v-card-text>Click the cover and you'll find a reference page for every book so you can quickly find all kinds of relevant information.</v-card-text>
+              <v-card-text class="body-2">
+                Click the cover and you'll find a reference page for every book so you can quickly find all kinds of relevant information.
+              </v-card-text>
             </v-card>
           </v-flex>
         </v-layout>
@@ -177,20 +203,25 @@
         grid-list-xs
         style="padding:24px 0"
       >
-        <a name="search" />
+        <a id="search" />
         <v-layout>
           <v-flex xs12>
             <v-card
               flat
             >
-              <v-card-text
-                fullwidth
-                class="green white--text Headline text-sm-center pt-5"
+              <v-parallax
+                src="https://img3.akspic.com/image/29342-line-grass-color-green-leaf-2560x1600.jpg"
+                height="100"
               >
-                <h1 class="mb-4">
-                  Give our search a try
-                </h1>
-              </v-card-text>
+                <v-card-text
+                  fullwidth
+                  class=" text-sm-center pt-5"
+                >
+                  <h1 class="mb-4 font-weight-light display-1">
+                    Give the search a try
+                  </h1>
+                </v-card-text>
+              </v-parallax>
               <v-flex
                 xs10
                 sm10

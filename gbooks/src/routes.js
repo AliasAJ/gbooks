@@ -3,7 +3,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 // import About from "./components/About.vue";
 
 export default [
-  { path: "/", component: HelloWorld }
-  // { path: "/books", component: Search }
+  { path: "/", component: HelloWorld },
+  { path: "/search", component: HelloWorld }
   //   { path: "/about", component: About }
 ];
