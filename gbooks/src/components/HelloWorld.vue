@@ -2,7 +2,8 @@
   <div class="hello">
     <v-card>
       <v-parallax
-        src="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
+        height="500"
+        src="https://www.setaswall.com/wp-content/uploads/2018/02/Green-Background-27-1920x1200.jpg"
       >
         <v-container
           fluid
@@ -10,14 +11,14 @@
         >
           <v-layout align-center>
             <v-flex
-              lg8
-              md8
+              lg7
+              md7
               xs12
               class="mt-5 mb-5"
             >
               <v-card
                 color="transparent"
-                class=" white--text pt-5 pb-5"
+                class=" green--text pt-5 pb-5"
                 flat
                 style="min-height: 400px;"
               >
@@ -30,7 +31,7 @@
                     <h1 class="mb-4">
                       Find the book you love.
                     </h1>
-                    <v-divider class="white mb-4" />
+                    <v-divider class="green mb-4" />
                     <p>
                       G-Books will help you find the perfect book for any mood.
                     </p>
@@ -42,7 +43,7 @@
                     href="#search"
                     large
                     outline
-                    color="white"
+                    color="green"
                   >
                     Search For Books
                   </v-btn>
@@ -182,25 +183,20 @@
             <v-card
               flat
             >
-              <v-parallax
-                height="100"
-                src="https://besthqwallpapers.com/img/original/47929/4k-android-green-and-yellow-google-chrome-material-design.jpg"
+              <v-card-text
+                fullwidth
+                class="green white--text Headline text-sm-center pt-5"
               >
-                <v-card-text
-                  fullwidth
-                  class=" Headline text-sm-center pt-5"
-                >
-                  <h1 class="mb-4">
-                    Give our search a try
-                  </h1>
-                </v-card-text>
-                <v-flex
-                  xs10
-                  sm10
-                  md6
-                  class="text-sm-center"
-                />
-              </v-parallax>
+                <h1 class="mb-4">
+                  Give our search a try
+                </h1>
+              </v-card-text>
+              <v-flex
+                xs10
+                sm10
+                md6
+                class="text-sm-center"
+              />
               <BookSearch />
             </v-card>        
           </v-flex>
