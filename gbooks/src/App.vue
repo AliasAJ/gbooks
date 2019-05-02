@@ -82,9 +82,6 @@
                   </v-icon>
                 </v-btn>
               </v-card-text>
-              <v-card-text class=" subheading black--text">
-                THANK YOU DocNetwork for allowing me the opportunity to try out for the team!
-              </v-card-text>
               <v-card-text class=" body-2 black--text">
                 &copy;2019 — <strong>Arthur Bates, Jr.</strong>
               </v-card-text>
